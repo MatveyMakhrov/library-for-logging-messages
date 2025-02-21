@@ -65,6 +65,11 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
+    if (argc > 2) {
+        std::cerr << "Incorrect number of arguments entered" << std::endl;
+        return 1;
+    }
+
     std::string logFilename = argv[1];
     Priority defaultPriority = Priority::UNKNOWN; // По умолчанию Priority::UNKNOWN
     if (argc >= 3) {
